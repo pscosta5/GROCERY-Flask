@@ -1,0 +1,15 @@
+<html>
+  <body>
+    {% if passthrough %}
+      <div>Recommended products</div>
+      <p>{{item1}}</p>
+      <em style="color: green; font-size: 2em;">{{ passthrough }}</em>.
+      <div>Selected products</div>
+      <em> {{selection}} </em>
+    {% else %}
+      No products selected
+    {% endif %}
+    <br/>
+    Click <a href="http://localhost:5000/hello"> here to make a new fun phrase.
+  </body>
+</html>

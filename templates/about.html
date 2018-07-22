@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GROCERY</title>
+  <link rel="shortcut icon" href="/static/assets/GROCERY_icon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/static/bundle.css">
+</head>
+<body class="home">
+  <nav class="grocery-drawer mdc-drawer mdc-drawer--permanent">
+    <i class="material-icons md-36"
+      <g id="XMLID_2_">
+        <g id="XMLID_4_">
+            shopping_basket
+        </g>
+        <rect id="XMLID_1_" fill="none" width="24" height="24"/>
+      </g>
+    </i>
+    <h1 class="grocery-title">GROCERY</h1>
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item insights-shop" href="index.html">
+          Shop
+        </a>
+        <a class="mdc-list-item insights-insights" href="insights.html">
+          Insights
+        </a>
+        <a class="mdc-list-item insights-about" href="about.html">
+          About
+        </a>
+        <li class="grocery-select-item-divider mdc-list-divider" role="separator"></li>
+      </nav>
+    </div>
+  </nav>
+  <div class="grocery-body">
+    <section class="header mdc-typography">
+      <h1 class="mdc-typography--headline2">About <b>GROCERY</b></h1>
+    </section>
+    <div class="mdc-layout-grid plot-list">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell">
+          <body class="mdc-typography">
+            <h1 class="mdc-typography--headline4">Prediting a user's next order using tf-idf</h1>
+            <p class="mdc-typography--body1">
+              Food is an important part of everyone's life—and a big market. The average
+              US household spends up to 33% of their income on groceries. Recently, Instacart—a
+              grocery delivery service—open-sourced over 3 million of their user orders. This
+              provided me a unique opportunity to study how people buy food, and see if we can predict
+              what a shopper will buy on their next shopping trip.
+            </p>
+            <p class="mdc-typography--body1">
+              The prediction system displayed here works by comparing a user's past
+              purchases with that of other users. First, the user's products are weighed by their
+              importance using inverse-document frequency (idf). It then assembles a group of people
+              deemed similar to the user, finds products with the highest cumulative weight, and recommends
+              these products to the user.
+            </p>
+            </br>
+            <img class="inline-image" src="/static/assets/slide6.png" alt="tf-idf matching">
+            <p class="mdc-typography--caption">
+              Vinny's orders are compared to other users in the database. It is observed that
+              Vinny shares some similar products—white cheddar popcorn and Greek yogurt—with
+              Austin. Similarly, Abby also likes to buy soda and beef jerky. The recommendation
+              engine will recommend products that Abby and Austin like to Vinny.
+            </p>
+            <p class="mdc-typography--body1">
+              The purpose of the system is to predict what product a user will purchase on their
+              next order. The model is able to predict 23% of the items a user will buy base on
+              their order history. This is a <b>329%</b> increase in accuracy when compared to a
+              simple popular product recommender.
+            </p>
+            </br>
+            <img class="inline-image" src="/static/assets/animation_product.gif" alt="tf-idf matching">
+            <p class="mdc-typography--body1">
+              While the demo here acts as a food recommender to a user, this algorithm
+              is really at home in a shopping interface—where recommended items are surfaced
+              to the user as they shop. Being able to accurately predict what a user will buy and
+              recommend to them items that they might like simultaneously improves the user experience
+              while driving up sales of these items.
+            </p>
+            <h1 class="mdc-typography--headline4">Contact me</h1>
+            <p class="mdc-typography--body1">
+              My name is Paulo S. Costa, and I'm looking for full-time employment as a data scientist.
+              <a href="https://goo.gl/forms/RuTbEdDxDW9X4XIn1" style="color:#442C2E">Contact me</a> if you'd
+              like to get in touch.
+            </p>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            <sp class="mdc-typography--body2">
+              “The Instacart Online Grocery Shopping Dataset 2017”,
+              Accessed from https://www.instacart.com/datasets/grocery-shopping-2017
+              on May 28th, 2018
+            </sp>
+          </body>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/static/bundle-about.js" async></script>
+</body>

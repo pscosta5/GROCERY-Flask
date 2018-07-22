@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GROCERY</title>
+  <link rel="shortcut icon" href="/static/assets/GROCERY_icon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/static/bundle.css">
+</head>
+<body class="home">
+  <nav class="grocery-drawer mdc-drawer mdc-drawer--permanent">
+    <i class="material-icons md-36"
+      <g id="XMLID_2_">
+        <g id="XMLID_4_">
+            shopping_basket
+        </g>
+        <rect id="XMLID_1_" fill="none" width="24" height="24"/>
+      </g>
+    </i>
+    <h1 class="grocery-title">GROCERY</h1>
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item insights-shop" href="index.html">
+          Shop
+        </a>
+        <li class="grocery-select-item-divider mdc-list-divider" role="separator"></li>
+        <a class="mdc-list-item insights-insights" href="insights.html">
+          Insights
+        </a>
+        <a class="mdc-list-item insights-about" href="about.html">
+          About
+        </a>
+      </nav>
+    </div>
+  </nav>
+  <div class="grocery-body">
+    <section class="header mdc-typography">
+      <h1 class="mdc-typography--headline2">Recommended items</h1>
+    </section>
+    <section class="instruct mdc-typography">
+      {% if passthrough %}
+      <h1 class="mdc-typography--headline6">Here are some items we think
+      you'd love...
+      </h1>
+      {% else %}
+      <h1 class="mdc-typography--headline6">You didn't select any products...
+      </h1>
+      {% endif %}
+    </section>
+    <div class="mdc-layout-grid plot-list">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell">
+          {% if passthrough %}
+            <ul class="mdc-list recommended-items" aria-orientation="vertical">
+              <li class="mdc-list-item">{{item1}}</li>
+              <li class="mdc-list-item">{{item2}}</li>
+              <li class="mdc-list-item">{{item3}}</li>
+              <li class="mdc-list-item">{{item4}}</li>
+              <li class="mdc-list-item">{{item5}}</li>
+              <li class="mdc-list-item">{{item6}}</li>
+              <li class="mdc-list-item">{{item7}}</li>
+              <li class="mdc-list-item">{{item8}}</li>
+              <li class="mdc-list-item">{{item9}}</li>
+              <li class="mdc-list-item">{{item10}}</li>
+            </ul>
+          {% else %}
+            <body class="mdc-typography">
+              <p class="mdc-typography--body1">
+                Check any combination of products on the shop page, then checkout
+                to get some recommend items.
+              </p>
+            </body>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="static/bundle-about.js" async></script>
+</body>

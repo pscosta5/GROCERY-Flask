@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GROCERY</title>
+  <link rel="shortcut icon" href="/static/assets/GROCERY_icon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/static/bundle.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var beerData = google.visualization.arrayToDataTable([
+                    ['Aisle', 'Relative aisle orders'],
+                    ['Beauty', 0-1],
+                    ['Tofu meat alternatives', 0.16-1],
+                    ['Dried fruits vegetables', 0.16-1],
+                    ['Soft drinks', 1.9-1],
+                    ['Frozen pizza', 1.7-1]
+                  ]);
+
+      var yogurtData = google.visualization.arrayToDataTable([
+                      ['Aisle', 'Relative aisle orders'],
+                      ['Beers coolers', 0.42-1],
+                      ['Granola', 2.28-1],
+                      ['Baby food/formula	', 1.99-1],
+                      ['Fruit/veg snacks', 1.6-1],
+                      ['Muscle pain relief', 0.73-1],
+                      ['Soft drinks', 0.89-1]
+                    ]);
+
+      var veggieData = google.visualization.arrayToDataTable([
+                      ['Aisle', 'Relative aisle orders'],
+                      ['Beers coolers', 0.43-1],
+                      ['Soft drinks', 0.74-1],
+                      ['Cookies cakes', 0.88-1],
+                      ['Fresh herbs', 1.94-1],
+                      ['Seafood counter', 1.76-1],
+                      ['Latino foods', 1.63-1]
+                    ]);
+
+    var veggieData = google.visualization.arrayToDataTable([
+                    ['Aisle', 'Relative aisle orders'],
+                    ['Beers coolers', 0.43-1],
+                    ['Soft drinks', 0.74-1],
+                    ['Cookies cakes', 0.88-1],
+                    ['Fresh herbs', 1.94-1],
+                    ['Seafood counter', 1.76-1],
+                    ['Latino foods', 1.63-1]
+                  ]);
+
+      var tofuData = google.visualization.arrayToDataTable([
+                    ['Aisle', 'Relative aisle orders'],
+                    ['Beers coolers', 0.12-1],
+                    ['Soft drinks', 0.56-1],
+                    ['Frozen vegan', 7.27-1],
+                    ['Indian foods', 4.38-1],
+                    ['Asian foods', 3.71-1],
+                    ['Soy lactosefree', 2.21-1],
+                    ['Poultry counter', 0.76-1]
+                  ]);
+      var select = document.getElementById('aisle-input')
+
+      var options = {
+        chart: {
+          title: 'Orders with an item from the beers and coolers aisle',
+        },
+        fontSize: 25,
+        colors: '#FEDBD0',
+        vAxis: {
+          title: 'Relative aisle orders',
+          format: 'percent',
+          titleTextStyle: {
+            fontSize: 13
+          },
+          textStyle: {
+            fontSize: 13
+          },
+          // gridlines: {
+          //   color: '#442C2E',
+          // },
+          baselineColor: '#442C2E',
+        },
+        hAxis: {
+          // Slanted text not supported yet for Material versions
+          // slantedText: true,
+          // slantedTextAngle: 45,
+          titleTextStyle: {
+            fontSize: 13
+          },
+          textStyle: {
+            fontSize: 13
+          },
+        },
+        legend: {
+          position: 'none'
+        }
+      };
+
+      var chart = new google.charts.Bar(document.getElementById('columnchart_material_aisle'));
+
+      chart.draw(beerData, google.charts.Bar.convertOptions(options));
+
+      select.onchange = function(e) {
+        if (e.target.value === 'beer') {
+          options.chart.title = 'Orders with an item from the beers and coolers aisle';
+          chart.draw(beerData, google.charts.Bar.convertOptions(options));
+        };
+        if (e.target.value === 'yogurt') {
+          options.chart.title = 'Orders with an item from the yogurt aisle';
+          chart.draw(yogurtData, google.charts.Bar.convertOptions(options));
+        };
+        if (e.target.value === 'veggie') {
+          options.chart.title = 'Orders with an item from the fresh vegetables aisle';
+          chart.draw(veggieData, google.charts.Bar.convertOptions(options));
+        };
+        if (e.target.value === 'tofu') {
+          options.chart.title = 'Orders with an item from the tofu meat alternatives aisle';
+          chart.draw(tofuData, google.charts.Bar.convertOptions(options));
+        };
+      }
+    };
+  </script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['line']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Hour of the day');
+      data.addColumn('number', 'Cereals');
+      data.addColumn('number', 'Coffee');
+      data.addColumn('number', 'Apples');
+      data.addColumn('number', 'Yogurt');
+      data.addColumn('number', 'Cookies');
+      data.addColumn('number', 'Ice cream');
+      data.addColumn('number', 'Cake');
+
+      data.addRows([
+        [0.00000000e+00, 0.00000000e+00, 3.01171518e-01, 3.86817433e-01, 2.78448887e-01, 3.31030645e-01, 3.78235374e-01, 3.02412636e-01],
+        [1.00000000e+00, 1.45725893e-01, 3.66031771e-01, 2.37834679e-01, 2.49687939e-02, 4.44907608e-01, 4.83654319e-01, 4.42665704e-01],
+        [2.00000000e+00, 5.01035651e-03, 5.02319795e-01, 0.00000000e+00, 0.00000000e+00, 3.08317561e-01, 5.95252887e-01, 1.00000000e+00],
+        [3.00000000e+00, 1.43999128e-01, 5.65721225e-01, 4.58166495e-02, 1.32527926e-01, 7.17989449e-01, 5.61428576e-01, 8.29007034e-01],
+        [4.00000000e+00, 3.17267657e-01, 5.93163649e-01, 4.37133980e-01, 1.01571648e-01, 3.39997563e-01, 4.32208492e-01, 3.59701851e-01],
+        [5.00000000e+00, 2.04402020e-01, 7.16097216e-01, 6.13991260e-01, 2.01467881e-01, 2.05653078e-01, 2.29001079e-01, 1.74809938e-01],
+        [6.00000000e+00, 7.57934434e-01, 6.67740566e-01, 9.13165425e-01, 8.72177586e-01, 1.08059306e-01, 3.22283053e-02, 4.70970714e-01],
+        [7.00000000e+00, 1.00000000e+00, 6.44824173e-01, 1.00000000e+00, 9.09030113e-01, 0.00000000e+00, 7.60413203e-04, 4.46249602e-01],
+        [8.00000000e+00, 6.55745307e-01, 7.85909975e-01, 9.30480389e-01, 1.00000000e+00, 1.32569303e-01, 0.00000000e+00, 2.38283776e-01],
+        [9.00000000e+00, 5.09390260e-01, 1.00000000e+00, 8.55712618e-01, 9.44659963e-01, 2.33887581e-01, 3.31440088e-02, 7.34844096e-02],
+        [1.00000000e+01, 3.75451160e-01, 9.20163841e-01, 5.96581263e-01, 7.14384261e-01, 3.75626470e-01, 8.72100847e-02, 5.69081626e-03],
+        [1.10000000e+01, 2.27125940e-01, 6.83130379e-01, 3.78953548e-01, 4.34903776e-01, 4.03233091e-01, 1.92504971e-01, 0.00000000e+00],
+        [1.20000000e+01, 1.40693336e-01, 5.20441906e-01, 3.07162530e-01, 2.70248062e-01, 4.33282116e-01, 3.10049941e-01, 8.42284692e-02],
+        [1.30000000e+01, 1.57503953e-01, 5.15237179e-01, 3.61217391e-01, 3.20768597e-01, 5.01448373e-01, 3.74127814e-01, 9.93475499e-02],
+        [1.40000000e+01, 2.11920271e-01, 5.40088137e-01, 3.70138314e-01, 3.84010157e-01, 5.25068228e-01, 4.24978437e-01, 1.43801559e-01],
+        [1.50000000e+01, 1.78389984e-01, 5.22875318e-01, 3.54888537e-01, 3.55254603e-01, 6.10381915e-01, 5.06621831e-01, 1.81333724e-01],
+        [1.60000000e+01, 2.75224424e-01, 5.17233036e-01, 3.31157421e-01, 3.62638219e-01, 6.58414008e-01, 5.89561291e-01, 2.18854577e-01],
+        [1.70000000e+01, 3.09042599e-01, 5.73085163e-01, 2.23264674e-01, 2.94811918e-01, 8.22213948e-01, 7.60018054e-01, 4.26519604e-01],
+        [1.80000000e+01, 4.61643790e-01, 5.42947415e-01, 2.23226516e-01, 3.35256230e-01, 9.40246619e-01, 9.44754630e-01, 6.63660419e-01],
+        [1.90000000e+01, 6.10106657e-01, 5.14211304e-01, 3.09787686e-01, 4.46019810e-01, 1.00000000e+00, 1.00000000e+00, 6.32569642e-01],
+        [2.00000000e+01, 6.80549046e-01, 3.51117037e-01, 4.92686363e-01, 6.84280086e-01, 7.62266172e-01, 7.76837610e-01, 5.67440290e-01],
+        [2.10000000e+01, 5.88119770e-01, 8.33090444e-02, 6.82059931e-01, 8.36157298e-01, 2.59665704e-01, 3.52254356e-01, 4.05329936e-01],
+        [2.20000000e+01, 3.49005018e-01, 0.00000000e+00, 6.42182069e-01, 7.99268308e-01, 1.01496799e-01, 2.09399903e-01, 2.92099665e-01],
+        [2.30000000e+01, 3.06695010e-01, 1.51440360e-01, 4.83609164e-01, 6.73511621e-01, 2.32546312e-01, 2.64945875e-01, 3.78020557e-01]
+      ]);
+
+      var options = {
+        // chart: {
+        //   title: 'Orders with an item from the beers and coolers aisle',
+        // },
+        fontSize: 25,
+        colors: ['#FEDBD0','#442C2E'],
+        vAxis: {
+          title: 'Normalized percentage of all orders',
+          titleTextStyle: {
+            fontSize: 13
+          },
+          textStyle: {
+            fontSize: 13
+          },
+          // gridlines: {
+          //   color: '#442C2E',
+          // },
+          baselineColor: '#442C2E',
+        },
+        hAxis: {
+          maxValue: 23,
+          // Slanted text not supported yet for Material versions
+          // slantedText: true,
+          // slantedTextAngle: 45,
+          titleTextStyle: {
+            fontSize: 13
+          },
+          textStyle: {
+            fontSize: 13
+          },
+        },
+        legend: {
+          textStyle: {
+            fontSize: 13
+          },
+        },
+      };
+
+
+      var chart = new google.charts.Line(document.getElementById('linechart_material_tod'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+  </script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['line']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Day of week');
+      data.addColumn('number', 'Apples');
+      data.addColumn('number', 'Yogurt');
+      data.addColumn('number', 'Broccoli');
+      data.addColumn('number', 'Lettuce');
+      data.addColumn('number', 'Cookies');
+      data.addColumn('number', 'Ice cream');
+      data.addColumn('number', 'Cake');
+
+      data.addRows([
+        [0.        , 0.40294426, 0.39337097, 1.        , 1.        ,
+          0.        , 0.3051957 , 0.19554658],
+         [1.        , 1.        , 1.        , 0.4440195 , 0.36464623,
+          0.47567634, 0.        , 0.        ],
+         [2.        , 0.61217611, 0.73749891, 0.32267968, 0.29978813,
+          0.84263711, 0.38786779, 0.53795863],
+         [3.        , 0.52306699, 0.52227103, 0.17899517, 0.06798349,
+          0.98373759, 0.64043464, 0.77188922],
+         [4.        , 0.4915155 , 0.5357779 , 0.04196249, 0.        ,
+          1.        , 0.64464922, 1.        ],
+         [5.        , 0.47682918, 0.6431462 , 0.        , 0.01020401,
+          0.88956067, 0.83353941, 0.99313192],
+         [6.        , 0.        , 0.        , 0.60824159, 0.54128379,
+          0.35637209, 1.        , 0.77133937]
+        ]);
+
+      var options = {
+        // chart: {
+        //   title: 'Orders with an item from the beers and coolers aisle',
+        // },
+        fontSize: 25,
+        colors: ['#FEDBD0','#442C2E'],
+        vAxis: {
+          title: 'Products purchased',
+          titleTextStyle: {
+            fontSize: 13
+          },
+          textStyle: {
+            fontSize: 13
+          },
+          // gridlines: {
+          //   color: '#442C2E',
+          // },
+          baselineColor: '#442C2E',
+        },
+        hAxis: {
+          // Slanted text not supported yet for Material versions
+          // slantedText: true,
+          // slantedTextAngle: 45,
+          titleTextStyle: {
+            fontSize: 13
+          },
+          textStyle: {
+            fontSize: 13
+          },
+        },
+        legend: {
+          textStyle: {
+            fontSize: 13
+          },
+        },
+      };
+
+
+      var chart = new google.charts.Line(document.getElementById('linechart_material_dow'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+  </script>
+  <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Product', 'Reorders'],
+          ['Cookies', 0.03060652697],
+          ['Cereals', 0.06422827281],
+          ['Ice cream', -0.01073255251],
+          ['Apples', 0.1451967023],
+          ['Yogurt', 0.1782610033],
+          ['Hot sauce', -0.1323572304],
+          ['Milk', 0.213935739],
+          ['Soup', -0.0723428095]
+        ]);
+
+        var options = {
+          // chart: {
+          //   title: 'Orders with an item from beers and coolers aisle',
+          // },
+          fontSize: 25,
+          colors: '#FEDBD0',
+          vAxis: {
+            title: 'Reorder rate',
+            titleTextStyle: {
+              fontSize: 13
+            },
+            textStyle: {
+              fontSize: 13
+            }
+          },
+          hAxis: {
+            // Slanted text not supported yet for Material versions
+            // slantedText: true,
+            // slantedTextAngle: 45,
+            titleTextStyle: {
+              fontSize: 13
+            },
+            textStyle: {
+              fontSize: 13
+            },
+          },
+          legend: {
+            position: 'none'
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material_reorder'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Hour of day');
+        data.addColumn('number', 'Products purchased');
+
+
+        data.addRows([
+          [      0,  218948],
+         [      1,  115786],
+         [      2,   69434],
+         [      3,   51321],
+         [      4,   53283],
+         [      5,   88062],
+         [      6,  290795],
+         [      7,  891937],
+         [      8, 1719973],
+         [      9, 2456713],
+         [     10, 2764426],
+         [     11, 2738582],
+         [     12, 2620847],
+         [     13, 2663292],
+         [     14, 2691548],
+         [     15, 2664533],
+         [     16, 2537458],
+         [     17, 2089465],
+         [     18, 1637923],
+         [     19, 1259401],
+         [     20,  977038],
+         [     21,  796370],
+         [     22,  634734],
+         [     23,  402620]
+          ]);
+
+        var options = {
+          // chart: {
+          //   title: 'Orders with an item from the beers and coolers aisle',
+          // },
+          fontSize: 25,
+          colors: ['#FEDBD0','#442C2E'],
+          vAxis: {
+            title: 'Products purchased',
+            titleTextStyle: {
+              fontSize: 13
+            },
+            textStyle: {
+              fontSize: 13
+            },
+            // gridlines: {
+            //   color: '#442C2E',
+            // },
+            baselineColor: '#442C2E',
+          },
+          hAxis: {
+            // Slanted text not supported yet for Material versions
+            // slantedText: true,
+            // slantedTextAngle: 45,
+            titleTextStyle: {
+              fontSize: 13
+            },
+            textStyle: {
+              fontSize: 13
+            },
+          },
+          legend: {
+            textStyle: {
+              fontSize: 13
+            },
+          },
+        };
+
+
+        var chart = new google.charts.Line(document.getElementById('linechart_material_tod_tot'));
+
+        chart.draw(data, google.charts.Line.convertOptions(options));
+      }
+    </script>
+  <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Day of the week');
+        data.addColumn('number', 'Products purchased');
+        data.addColumn('number', 'Orders');
+
+
+        data.addRows([
+          [0, 6209666,  600905],
+          [1, 5665856,  587478],
+          [2, 4217798,  467260],
+          [3, 3844117,  436972],
+          [4, 3787215,  426339],
+          [5, 4209533,  453368],
+          [6, 4500304,  448761]
+          ]);
+
+        var options = {
+          // chart: {
+          //   title: 'Orders with an item from the beers and coolers aisle',
+          // },
+          fontSize: 25,
+          colors: ['#FEDBD0','#442C2E'],
+          series: {
+            0: {axis: 'Products'},
+            1: {axis: 'Orders'}
+          },
+          axes: {
+            y: {
+              Products: {label: 'Products purchased'},
+              Orders: {label: 'Orders'},
+              textStyle: {
+                fontsize: 13
+              },
+              baselineColor: '#442C2E'
+            },
+          },
+          vAxis: {
+            titleTextStyle: {
+              fontSize: 13
+            },
+            textStyle: {
+              fontSize: 13
+            },
+            // gridlines: {
+            //   color: '#442C2E',
+            // },
+            baselineColor: '#442C2E',
+          },
+          hAxis: {
+            // Slanted text not supported yet for Material versions
+            // slantedText: true,
+            // slantedTextAngle: 45,
+            titleTextStyle: {
+              fontSize: 13
+            },
+            textStyle: {
+              fontSize: 13
+            },
+          },
+          legend: {
+            textStyle: {
+              fontSize: 13
+            },
+          },
+        };
+
+
+        var chart = new google.charts.Line(document.getElementById('linechart_material_dow_tot'));
+
+        chart.draw(data, google.charts.Line.convertOptions(options));
+      }
+    </script>
+</head>
+<body class="home">
+  <nav class="grocery-drawer mdc-drawer mdc-drawer--permanent">
+    <i class="material-icons md-36"
+      <g id="XMLID_2_">
+        <g id="XMLID_4_">
+            shopping_basket
+        </g>
+        <rect id="XMLID_1_" fill="none" width="24" height="24"/>
+      </g>
+    </i>
+    <h1 class="grocery-title">GROCERY</h1>
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item insights-shop" href="index.html">
+          Shop
+        </a>
+        <a class="mdc-list-item insights-insights" href="insights.html">
+          Insights
+        </a>
+        <li class="grocery-select-item-divider mdc-list-divider" role="separator"></li>
+        <a class="mdc-list-item insights-about" href="about.html">
+          About
+        </a>
+      </nav>
+    </div>
+  </nav>
+  <div class="grocery-body">
+    <section class="header mdc-typography">
+      <h1 class="mdc-typography--headline2">Consumer insights</h1>
+    </section>
+    <div class="mdc-layout-grid plot-list">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell">
+          <body class="mdc-typography">
+            <h1 class="mdc-typography--headline4">Classifying orders by aisle</h1>
+            <h1 class="mdc-typography--body1">
+              We can use the aisle a user shops from to predict their subsequent
+              purchases. The charts below show how an order that conatins a product
+              from certain aisle compares to an average order. One example is that if
+              an order contains a product from the beer and coolers aisle, it will
+              typically contain <b>90% more</b> soft drinks and <b>84% less</b>
+              tofu-based meat alternatives than the average order. Use the menu below
+              to explore how shopping from other aisles effects the overall order.
+            </h1>
+          </body>
+          <body class='aisle-chart'>
+            <br/>
+            <br/>
+            <div class="mdc-select mdc-select--box aisle-select">
+              <select class="mdc-select__native-control" id="aisle-input" required>
+                <option value="beer" selected>Beer</option>
+                <option value="yogurt">Yogurt</option>
+                <option value="veggie">Fresh vegetables</option>
+                <option value="tofu">Meat alternatives</option>
+              </select>
+              <label class="mdc-floating-label mdc-floating-label--float-above" for="aisle-input">
+                Aisle
+              </label>
+              <div class="mdc-line-ripple"></div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+           <div id="columnchart_material_aisle" style="width: 100%; height: 500px;"></div>
+          </body>
+        </div>
+        <div class="mdc-layout-grid__cell">
+          <body class="mdc-typography">
+            <h1 class="mdc-typography--headline4">The effect of time</h1>
+            <p class="mdc-typography--body1">
+              <i>When</i> a user goes shopping makes a difference as well. We
+              can observe a few trends on the different types of products purchased
+              depending on the time.
+            </p>
+            <h2 class="mdc-typography--headline5">Time of day</h2>
+            <p class="mdc-typography--body1">
+              The time of the day has an effect on the products purchased. We can see that
+              some breakfast foods and healthier options are purchased more in the morning.
+              In the evening however, more desserts are purchased. We can see that cake hits
+              its highest peak at 2:00 am! Hover your cursor over the items in the legend to
+              highlight their line on the plot.
+            </p>
+          </body>
+          <body class='aisle-chart'>
+            <br/>
+            <br/>
+           <div id="linechart_material_tod" style="width: 100%; height: 500px"></div>
+          </body>
+          <body class="mdc-typography">
+            <h2 class="mdc-typography--headline5">Day of the week</h2>
+            <p class="mdc-typography--body1">
+              Similar to the findings for the time of the day, the day of the week
+              also plays a role in the types of foods purchased. Healthier options
+              are purchased earlier in the week and on the weekends, with sweeter
+              foods becomming more popular as the week goes on. Hover your cursor
+              over the items in the legend to highlight their line on the plot.
+            </p>
+          </body>
+          <body class='aisle-chart'>
+            <br/>
+            <br/>
+           <div id="linechart_material_dow" style="width: 100%; height: 500px"></div>
+          </body>
+
+        </div>
+        <div class="mdc-layout-grid__cell">
+          <body class="mdc-typography">
+            <h1 class="mdc-typography--headline4">What products are reordered?</h1>
+            <p class="mdc-typography--body1">
+              The type of product impacts whether most users simply reorder the exact same
+              product or buy new flavors or brands. For example, milk purchases are
+              overwhelmingly reorders, while a majority of hot sauce and soup purchases
+              are users buying a new product for the first time.
+            </p>
+          </body>
+          <body class='aisle-chart'>
+            <br/>
+            <br/>
+            <div id="columnchart_material_reorder" style="width: 100%; height: 500px;"></div>
+          </body>
+        </div>
+        <div class="mdc-layout-grid__cell">
+          <body class="mdc-typography">
+            <h1 class="mdc-typography--headline4">When do people shop?</h1>
+            <p class="mdc-typography--body1">
+              We can analyze this data to observe <i>when</i> people shop for groceries.
+            </p>
+            <h2 class="mdc-typography--headline5">Time of day</h2>
+            <p class="mdc-typography--body1">
+              Most products are purchased in the morning and afternoon.
+            </p>
+          </body>
+          <body class='aisle-chart'>
+            <br/>
+            <br/>
+           <div id="linechart_material_tod_tot" style="width: 100%; height: 500px"></div>
+          </body>
+          <h2 class="mdc-typography--headline5">Day of the week</h2>
+          <p class="mdc-typography--body1">
+            Most shopping is done on the weekends. Interestingly, while the number
+            of orders slightly dip on Friday, the amount of products increases—so there
+            are fewer shoppers, but they purchase more.
+          </p>
+          </body>
+          <body class='aisle-chart'>
+            <br/>
+            <br/>
+           <div id="linechart_material_dow_tot" style="width: 100%; height: 500px"></div>
+          </body>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/static/bundle-insights.js" async></script>
+</body>

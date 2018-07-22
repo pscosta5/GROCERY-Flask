@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GROCERY</title>
+  <link rel="shortcut icon" href="/static/assets/GROCERY_icon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/static/bundle.css">
+</head>
+<body class="home">
+  <nav class="grocery-drawer mdc-drawer mdc-drawer--permanent">
+    <i class="material-icons md-36"
+      <g id="XMLID_2_">
+        <g id="XMLID_4_">
+            shopping_basket
+        </g>
+        <rect id="XMLID_1_" fill="none" width="24" height="24"/>
+      </g>
+    </i>
+    <h1 class="grocery-title">GROCERY</h1>
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item shop-shop" href="index.html">
+          Shop
+        </a>
+        <li class="grocery-select-item-divider mdc-list-divider" role="separator"></li>
+        <a class="mdc-list-item shop-insights" href="insights.html">
+          Insights
+        </a>
+        <a class="mdc-list-item shop-about" href="about.html">
+          About
+        </a>
+      </nav>
+    </div>
+  </nav>
+
+  <div class="grocery-body">
+    <section class="header mdc-typography">
+      <h1 class="mdc-typography--headline2">Shop</h1>
+    </section>
+    <section class="instruct mdc-typography">
+      <h1 class="mdc-typography--headline6">Select items
+        that you like, then checkout to get a sample of some
+        recommended products</h1>
+    </section>
+    <!-- method="POST" -->
+    <form action="/index.html" method="POST">
+      <ul class="mdc-image-list mdc-image-list--masonry product-list">
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/tofu-1713238_1920.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field tofu-form">
+              <div class="mdc-checkbox tofu-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="tofu" value="41005 2704 18691 24195 45282 3240 36230 5525 11288 33613 43289 11927 48811 6694 12145 12468 13496 13604 20410 25492 30237 39182 42023 42111 42558 616 904 1455 2344 2791 3174 3280 3385 3574 5009 5539 5688 5728 5764 7673 10410 15783 17083 17876 18080 18726 19477 19772 20158 20557 22167 25064 25695 26453 27299 27741 29024 29257 29593 29724 29851 31093 31155 31342 31770 32442 33106 35670 36502 39301 41179 41378 41588 42507 42519 42572 42585 43068 44382 46671 47059 47724 48123 48444 48491 49386 49638 13419 41363 42328 46443"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Tofu</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/j-kelly-brito-73204-unsplash.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field protein-form">
+              <div class="mdc-checkbox protein-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="protein" value="47957 324 370 387 406 1378 1744 2482 2619 3362 4130 4460 5546 6217 6235 6375 6567 6829 6902 6964 7423 7452 7467 8273 8367 8698 8873 9466 11647 11681 12857 13192 13271 13358 13602 13754 13960 14050 14186 14520 14656 14683 14740 15064 16072 16381 16793 17761 17891 18146 19314 20183 22933 23373 24495 25346 25387 26012 26270 26518 26735 27272 27736 27875 29120 29389 29940 29967 30522 30750 31477 31746 32653 32820 33009 33114 33264 33325 33979 34163 35003 35776 36039 36205 36248 36830 36964 38624 38730 38750 39069 39384 39684 39972 40687 41063 41112 41427 41455 41817 41854 42442 42665 43143 43208 44206 44255 44689 45744 46257 47275 47464 47585 48070 48285 48307 48314 49525 49566 31942 15754 18939 19182 20099 22297 25056 35415 41305 31310 4196 7924 18542 21594 23598 32795 43669 45311"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Protein bars</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/annie-spratt-553036-unsplash.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field hotdog-form">
+              <div class="mdc-checkbox hotdog-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="hotdog" value="15770 17132 41037 2182 4421 7415 8025 9225 9397 16198 29021 31546 36305 37651 45633 48765 48795 2371 11286 15576 21227 45864 20064 28259 2169 2841 3313 3855 4515 4700 7043 8076 8242 11067 13209 15369 15869 16956 18987 19543 22693 22951 22998 24136 24654 29080 33654 33753 34968 38666 40127 40228 41301 43886 44764 45019 45488 45908 47392 47760 49334"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Hot dogs</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/agriculture-blur-carrots-196643.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field carrot-form">
+              <div class="mdc-checkbox carrot-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="carrot" value="343 2055 5819 10102 10151 10193 10329 10613 11058 11992 14668 15130 15719 16570 18148 22849 23819 27336 28289 28632 32768 32851 32864 32955 34009 36222 37528 41299 41329 42265 42834 43787 43961 44410 47444 48299 48785 312 1899 4889 8809 9098 10866 15935 16759 17794 19063 19667 25152 27361 28413 29675 32446 41468 41565 47959 49121"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Carrots</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/anise-aroma-art-277253.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field spice-form">
+              <div class="mdc-checkbox spice-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="spice" value="240 463 908 922 1412 1585 2156 2340 2443 2505 2586 2918 2950 3259 3310 3445 3762 3907 4183 4489 4647 4659 6266 6405 6525 7062 7174 7298 7704 7727 7814 8600 8854 8998 9728 9961 10571 10960 11134 11198 12031 12143 12342 12710 13022 13095 13391 13469 13493 13588 14776 14820 15058 15127 15274 15283 15517 15569 15624 16017 16137 16482 16555 17161 17362 17536 17977 19098 19466 19557 19676 22466 22841 22940 22999 23395 23526 23998 24113 25678 25730 25891 26074 26545 26641 26719 26764 26976 27339 27382 27497 27972 28263 28631 29000 29079 29304 29342 29354 29514 29730 30031 30632 31913 32012 32024 32510 33341 33807 33876 33951 34138 34407 34826 34828 35231 35238 35256 35333 35416 35573 35728 35812 36445 36747 36793 36840 37633 37913 38907 38968 39341 39413 39421 39995 40136 40479 40626 40762 40802 40955 41247 41403 41436 41953 42194 42229 42272 42384 42717 42841 43064 43121 43244 43375 43492 43715 43752 43806 44040 44412 44813 45142 45214 45609 45919 46174 46568 46653 47226 47452 47623 47661 48101 48207 48603 49092 49137 49449 171 243 1113 1239 1247 1554 3427 5027 5625 5863 7070 8126 8994 11131 11443 13669 16890 17074 17463 20221 20566 21437 22463 23945 24808 25299 25575 26509 28547 28978 29396 31840 33038 33859 34130 34849 35068 35478 35923 36380 37375 38470 40415 40478 40912 42733 42773 45059 46031 46980 47486 48077 48684 4878 7400 33808 42339 46222 33566" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Spices</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/baguette-bake-baked-717130.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field baguettes-form">
+              <div class="mdc-checkbox baguettes-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="baguettes" value="6282 43758 44533 48051"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Baguettes</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/bakery-dessert-food-8279.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field muffins-form">
+              <div class="mdc-checkbox muffins-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="muffins" value="10156 41974 116 2776 2949 3308 3847 3849 3919 5579 6402 6651 7547 9872 10176 10673 10896 12258 13250 13694 13884 17352 17706 18886 18894 19366 22170 23472 24062 24148 24375 24721 27554 28129 29326 29952 30038 30061 31371 32239 32315 33037 33351 34747 35181 35228 35425 35740 36118 36342 36857 37396 37439 37745 37840 38775 38988 39437 40218 40872 42458 42637 42680 42897 44000 44275 44416 44666 46065 46301 46975 47989 47992 48356 48856 2298 31257 40241 7330 8437 21683 36296"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Muffins</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/baking-bread-breakfast-920220.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field toast-form">
+              <div class="mdc-checkbox toast-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="toast" value="8184 10446 13702 14354 16419 20872 21153 29868 29925 31141 32754 45123 46439"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Sliced bread</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/beef-cooking-delicious-769289.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field steak-form">
+              <div class="mdc-checkbox steak-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="steak" value="4938 16529 19116 40769 860 1292 2505 3259 3972 14820 15283 19676 32510 37830 45609 171 9731 14744 16695 21437 23018 25299 25687 29511 32725 35077 35644 36251 40629 45057 47006 10438 18633 25191 33312 20375 21105 38105 3575 4387 4450 4673 5102 6214 7812 8030 8972 9410 10922 12296 12840 14196 14794 15348 16158 16378 16817 21150 21297 21471 22440 26428 27687 33251 33366 34108 35247 35291 35593 37082 37280 38107 38706 43072 43199 44315 44571 45669 47698 49181 2638 34908 40238 6156 6660 13973 37536 37573 37895 38402 43451 43877 45099 48161 34174 48558 14106 3775 27963 28909 32758 175 692 2301 2503 5215 6849 9450 9871 17565 18232 20403 24086 26842 28046 28999 29707 36469 39159 42059 44946 45327 46771 2821 47299 22458 29219 29890 7783 12242 13155 14149 25860 26988 31896 43511 2143 8227 18779 25003 30854 35095 26678 40015 18936 14540 31985 34605 12810 16392 19388 8173 43650 2807 35021 29982 46712 13103 32048 47250 49486"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Steak</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/berries-berry-blur-302478.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field raspberries-form">
+              <div class="mdc-checkbox raspberries-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="raspberry" value="11777 27966 9948 19604 21637 43352"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Raspberries</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/berries-berry-bowl-89778.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field strawberries-form">
+              <div class="mdc-checkbox strawberries-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="strawberry" value="45652 12775 16797 21137 22101 24567 33561 35184 49073 49478"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Strawberries</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/berries-blueberries-bread-708488.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field blueberries-form">
+              <div class="mdc-checkbox blueberries-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="blueberry" value="49635 3513 14927 15143"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Blueberries</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/blue-colors-cream-928475.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field donuts-form">
+              <div class="mdc-checkbox donuts-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="donut" value="2880 7858 19839 28923 31684 33353 35768 41091 41572 47901 2584 15029 22894 28059 30132 49254"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Donuts</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/blur-breakfast-close-up-376464.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field pancakes-form">
+              <div class="mdc-checkbox pancakes-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="pancakes" value="9983 12573 15933 16832 44534 47813 49539 6807 23196 30825 33202 37402 39884 45377 48255 49532 18678 42511 1268 1310 2578 3272 3359 3383 5021 5670 9208 10890 11985 13560 14427 14636 19010 22228 22908 26250 29001 30090 31710 31960 36410 41453 45313 45612 46766 47616 47689 68 565 745 994 1583 1633 3510 4593 7458 8308 8895 8952 10498 10612 12598 13332 16720 18983 20218 20288 20676 20705 21109 21235 22442 25893 25980 26098 26248 27266 28028 28140 28539 28624 28911 29485 30157 30199 30836 31670 31753 33388 34019 34144 34666 34814 35694 35901 36373 36810 38199 38791 38875 39073 40407 40568 41083 42173 44220 45081 45584 46318 46812 47064 49391 49633 9514 38646 1414 9280 16455 25568 26140 33905 19733 13685 17138"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Pancakes</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/buffet-chicken-cooking-5938.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field salads-form">
+              <div class="mdc-checkbox salads-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="salad" value="142 347 364 601 1080 1481 2315 2469 2643 2719 2738 3673 4133 4539 4814 4947 5280 5437 5566 5976 6236 6927 7502 8009 8431 8432 8964 9163 9311 9597 9631 9830 10280 10344 10807 11375 12035 12055 12251 13287 14005 14952 15293 15325 16243 16870 17070 17765 18218 18394 18432 19183 20632 20855 20919 20929 21101 21524 21674 21872 21925 22359 23693 23753 25497 25931 26312 28157 28642 29025 29245 29792 30278 30519 31492 31648 31958 32031 33145 34117 34447 35124 35155 37244 37413 37489 37528 37541 38420 38974 40311 41492 42873 42913 43086 44910 45202 47444 47685 48327 48632 48657 48681 48789 48907 39825 43772 38768"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Salads</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/citrus-citrus-fruit-close-up-52533.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field oranges-form">
+              <div class="mdc-checkbox oranges-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="orange" value="2058 10075 12616 15749 34428 36226 40858 1244 2446 9906 12784 15290 29425 43153 2321 3805 4377 6647 6708 8174 8804 9071 13623 14704 16677 21077 24135 26379 27068 32177 33740 36710 36755 42868 45231 46179 46818 47630 47759 48823"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Oranges</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/agriculture-bulb-close-up-159250.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field onions-form">
+              <div class="mdc-checkbox onions-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="onion" value="31 2568 3002 4080 4581 4992 5854 8599 12511 14727 16564 16871 25230 32852 36222 39646 41813 48344 48894 1282 2605 2780 2846 3243 4605 5025 5099 5818 6773 7058 7628 8518 9063 9206 9436 9601 12815 22935 24133 24481 25938 28273 28704 31562 34824 38383 42096 44142 44588 45283 45936 47016 48364 42282"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Onions</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/appetizing-beef-black-background-533352.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field roast-beef-form">
+              <div class="mdc-checkbox roast-beef-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="roast-beef" value="37034 32531 5835 14207 19192 20028 29861 21649 40406 5957 12346 15082 16951 24660 26655 29871 34769 35194 36099 36400 42189 43509 19810"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Roast beef</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/appetizer-bake-baked-372851.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field churros-form">
+              <div class="mdc-checkbox churros-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="churro" value="42917 30555 27517 4046"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Churros</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/chili-peper-food-red-63596.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field chili-peppers-form">
+              <div class="mdc-checkbox chili-peppers-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="pepper" value="15072 4739 4043"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Peppers</label>
+            </div>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <img class="mdc-image-list__image" src="/static/assets/avocado-cooked-delicious-262959.jpg">
+          <div class="mdc-image-list__supporting">
+            <div class="mdc-form-field salmon-form">
+              <div class="mdc-checkbox salmon-check">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1" name="salmon" value="2167 34826 45939 1259 44916 13264 14013 21820 22459 39826 7390 17276 19986 20679 31595 33667 33849 34990 38957 44371 45915 18812 620 37802 45668 46350 561 941 3541 6759 8379 8414 8626 10121 11772 11792 12871 13877 15211 16785 17237 20070 22073 26252 28988 29056 29229 30755 31049 31207 33447 35485 36738 37259 37661 38489 38989 39787 39988 41071 42816 43465 44001 47066 48829 1153 1593 5933 16397 21758 29852 35629 38006 42037 42269 48089 5367 5635 7321 11101 12135 21585 25475 29948 32722 35085 37484 38554 49294" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+              <label class="mdc-checkbox-label" for="checkbox-1">Atlantic salmon</label>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button class="mdc-fab mdc-fab--extended app-fab--absolute" type="submit">
+        <span class="mdc-fab__label">Checkout</span>
+        <span class="mdc-fab__icon material-icons">shopping_cart</span>
+      </button>
+    </form>
+  </div>
+
+
+  <script src="/static/bundle-index.js" async></script>
+</body>
+</html>

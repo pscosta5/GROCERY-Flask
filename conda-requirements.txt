@@ -1,0 +1,11 @@
+pandas
+flask
+jinja2
+pip
+
+numpy
+ast
+sklearn
+collections
+scipy
+pickle
