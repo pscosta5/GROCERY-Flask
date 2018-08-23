@@ -1,5 +1,8 @@
 # **GROCERY**
+![screenshot](https://lh3.googleusercontent.com/-88_AVB_EQs3Yi-so2I1yOM9aqKZwWL97DcnKiLCzIsxt1f1-swIZ1AeZ4kUV51kFCnYa0WNSg6l8R3lIYDHNsqOWkOEcC3gyj1uC3biGHarplDDR-mbeFWZPZyMJx9zYVkGPltANhveczZv4F-Ct1YaCY5OVUUfXfIe547gRo0GBXLQigCkJ4ih7i5ebbCOFtNfJccw9wUTqFdHy7W8bjevzoW3KuFUES8UKe8CLnFm6rVXUD1znLEgw7JelluS47f2G65jCqGsACQzbSi4lFDOB1BrtbtNjAPe1of2l9bwz3-IzCxX5SIGllrIsP5mvOxu2geLfSH_Jw_2VMJ7-svBrLmzRaZ9zs01dRiRxorIYzAtHnA5LH2tOVYVIh6iSjM_Jq--H7sSlhDMVlzGMsQGY16ZF10Chi6mt79cW_8ux2fCFpqu_j1pZHWINkT4Xf2Sx4EQR8143VTBdOAAnJImbfUWOBsTew4CnT27vTqE1obus1bfaEg1LSW4N88yqlwC-QbBklhYL-HrRp0LeiaNE13ZNfWlBcDSdHXt1A3CDQw1-Lp72-Q8Zn4FH00o3cvzQJ-fZYfma6MPaem6ooCm43rJPxCFU35CFYdA=w1422-h1122-no)
 
 **GROCERY** is a recommendation app for predicting what a user will buy on their next
 grocery trip based on their previous purchases. It uses tf-idf to compare a user's
 orders to that of other users, and recommends items based on their similarity.
+
+[Check out the website](bit.ly/GROCERY_PAULO)
