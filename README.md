@@ -5,4 +5,4 @@
 grocery trip based on their previous purchases. It uses tf-idf to compare a user's
 orders to that of other users, and recommends items based on their similarity.
 
-[Check out the website](bit.ly/GROCERY_PAULO)
+[Check out the website](https://grocery-paulo.herokuapp.com/)
